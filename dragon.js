@@ -24,5 +24,84 @@ function fly() {
     console.log("Monster is already flying.");
   }
 
-  checkStats();
+  //checkStats();
 }
+
+fly();
+
+function walk() {
+  if (movement === "flying") {
+    movement = "walking";
+    speed -= 50;
+    console.log(`Monster is now walking, speed ${speed}`);
+  } else if (movement === "walking") {
+    console.log("Monster is already walking.");
+  }
+}
+walk();
+
+console.log("------------");
+
+function attack(number) {
+  if (energy < 30) {
+    console.log("Don't have enough energy to attack!");
+    return; // prekid funkcije
+  }
+
+  if (number < attackPower) {
+    console.log("Monster attacked successfully!");
+    experience += 50;
+    energy -= 50;
+  } else {
+    console.log("Monster failed to attack!");
+    energy -= 70;
+    health -= 50;
+  }
+
+  // checkStats(); // aktiviraćemo kasnije
+}
+function attack(number) {
+  if (energy < 30) {
+    console.log("Don't have enough energy to attack!");
+    return; // prekid funkcije
+  }
+
+  if (number < attackPower) {
+    console.log("Monster attacked successfully!");
+    experience += 50;
+    energy -= 50;
+  } else {
+    console.log("Monster failed to attack!");
+    energy -= 70;
+    health -= 50;
+  }
+
+  // checkStats(); // aktiviraćemo kasnije
+}
+
+attack(40); // uspešan napad ako je attackPower = 54
+attack(70); // neuspešan napad
+
+function heal() {
+  health += 100;
+  energy += 100;
+  logStats();
+}
+heal();
+
+function checkStats() {
+  if (health < 1) {
+    console.log("Monster died. GAME OVER");
+    return;
+  }
+
+  if (experience > 100) {
+    level += 1;
+    experience = experience - 100; // prenesi višak
+    console.log(
+      `Level up! Monster is now level ${level}, experience is ${experience}`
+    );
+  }
+}
+
+checkStats();
