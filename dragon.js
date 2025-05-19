@@ -23,10 +23,10 @@ function fly() {
   } else if (movement === "flying") {
     console.log("Monster is already flying.");
   }
+  checkStats();
 }
 
-fly();
-
+console.log("------------------");
 function walk() {
   if (movement === "flying") {
     movement = "walking";
@@ -35,8 +35,8 @@ function walk() {
   } else if (movement === "walking") {
     console.log("Monster is already walking.");
   }
+  checkStats();
 }
-walk();
 
 console.log("------------");
 
@@ -55,6 +55,7 @@ function attack(number) {
     energy -= 70;
     health -= 50;
   }
+  checkStats();
 }
 function attack(number) {
   if (energy < 30) {
@@ -95,6 +96,19 @@ function checkStats() {
       `Level up! Monster is now level ${level}, experience is ${experience}`
     );
   }
+  checkStats();
 }
+fly();
+walk();
+
+console.log("------------");
+
+attack(40);
+
+console.log("------------");
+
+heal();
+
+console.log("------------");
 
 checkStats();
