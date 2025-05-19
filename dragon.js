@@ -23,8 +23,6 @@ function fly() {
   } else if (movement === "flying") {
     console.log("Monster is already flying.");
   }
-
-  //checkStats();
 }
 
 fly();
@@ -45,7 +43,7 @@ console.log("------------");
 function attack(number) {
   if (energy < 30) {
     console.log("Don't have enough energy to attack!");
-    return; // prekid funkcije
+    return;
   }
 
   if (number < attackPower) {
@@ -57,13 +55,11 @@ function attack(number) {
     energy -= 70;
     health -= 50;
   }
-
-  // checkStats(); // aktiviraćemo kasnije
 }
 function attack(number) {
   if (energy < 30) {
     console.log("Don't have enough energy to attack!");
-    return; // prekid funkcije
+    return;
   }
 
   if (number < attackPower) {
@@ -75,12 +71,9 @@ function attack(number) {
     energy -= 70;
     health -= 50;
   }
-
-  // checkStats(); // aktiviraćemo kasnije
 }
 
-attack(40); // uspešan napad ako je attackPower = 54
-attack(70); // neuspešan napad
+attack(40);
 
 function heal() {
   health += 100;
@@ -97,7 +90,7 @@ function checkStats() {
 
   if (experience > 100) {
     level += 1;
-    experience = experience - 100; // prenesi višak
+    experience = experience - 100;
     console.log(
       `Level up! Monster is now level ${level}, experience is ${experience}`
     );
