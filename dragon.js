@@ -23,7 +23,6 @@ function fly() {
   } else if (movement === "flying") {
     console.log("Monster is already flying.");
   }
-  checkStats();
 }
 
 console.log("------------------");
@@ -35,7 +34,7 @@ function walk() {
   } else if (movement === "walking") {
     console.log("Monster is already walking.");
   }
-  checkStats();
+  /*checkStats();*/
 }
 
 console.log("------------");
@@ -55,26 +54,9 @@ function attack(number) {
     energy -= 70;
     health -= 50;
   }
-  checkStats();
-}
-function attack(number) {
-  if (energy < 30) {
-    console.log("Don't have enough energy to attack!");
-    return;
-  }
-
-  if (number < attackPower) {
-    console.log("Monster attacked successfully!");
-    experience += 50;
-    energy -= 50;
-  } else {
-    console.log("Monster failed to attack!");
-    energy -= 70;
-    health -= 50;
-  }
 }
 
-attack(40);
+console.log("------------");
 
 function heal() {
   health += 100;
@@ -82,21 +64,21 @@ function heal() {
   logStats();
 }
 heal();
+console.log("------------");
 
 function checkStats() {
   if (health < 1) {
-    console.log("Monster died. GAME OVER");
+    console.log("Monster died. Game over");
     return;
   }
 
   if (experience > 100) {
     level += 1;
-    experience = experience - 100;
+    experience = 0;
     console.log(
       `Level up! Monster is now level ${level}, experience is ${experience}`
     );
   }
-  checkStats();
 }
 fly();
 walk();
