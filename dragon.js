@@ -94,3 +94,4 @@ heal();
 console.log("------------");
 
 checkStats();
+<div>new title</div>;
