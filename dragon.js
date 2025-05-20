@@ -95,3 +95,4 @@ console.log("------------");
 
 checkStats();
 <div>new title</div>;
+<h1></h1>;
