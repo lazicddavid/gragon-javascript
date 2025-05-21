@@ -104,7 +104,26 @@ function getBookInfo() {
   let stanje = "nova";
   let zanr = "tehnologija";
   let naStanju = true;
-}
-return `Naslov: ${naslov}, Autor: ${autor}, Cena: ${cena}, Stanje: ${stanje}`;
 
-getBookInfo();
+  return `Naslov: ${naslov}, Autor: ${autor}, Cena: ${cena}, Stanje: ${stanje}`;
+}
+
+console.log(getBookInfo());
+
+function calculateBookAge() {
+  let godinaIzdavanja = 2022;
+  let trenutnaGodina = new Date().getFullYear();
+  let starostKnjige = trenutnaGodina - godinaIzdavanja;
+  return starostKnjige;
+}
+console.log("Knjiga je stara" + calculateBookAge() + " godina");
+
+function changeBookPrice(novaCena) {
+  cena = novaCena;
+  return cena;
+}
+console.log(`Nova cena je ${changeBookPrice(39)} evra.`);
+
+function changeBookState() {
+  if 
+}
