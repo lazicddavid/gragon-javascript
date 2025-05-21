@@ -124,6 +124,16 @@ function changeBookPrice(novaCena) {
 }
 console.log(`Nova cena je ${changeBookPrice(39)} evra.`);
 
-function changeBookState() {
-  if 
+function changeBookState(novoStanje) {
+  if (
+    novoStanje === "nova" ||
+    novoStanje === "polovna" ||
+    novoStanje === "ostecena"
+  ) {
+    stanje = novoStanje;
+    return `Stanje knjige je sada: ${stanje}`;
+  } else {
+    return "Greska: dozvoljena stanja su: 'nova' , 'polovna' , 'ostecena'.";
+  }
 }
+console.log(changeBookState("polovna"));
