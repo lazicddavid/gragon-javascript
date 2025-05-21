@@ -137,3 +137,19 @@ function changeBookState(novoStanje) {
   }
 }
 console.log(changeBookState("polovna"));
+
+function IsInStock() {
+  if (naStanju === true) {
+    console.log("Knjiga je na stanju");
+  } else {
+    console.log(`Knjiga nije dostupna`);
+    return false;
+  }
+}
+IsInStock();
+
+function toggleStockStatus() {
+  naStanju = !naStanju;
+  console.log(`Stanje knjige je sada: ${naStanju ? "dostupna" : "nedostupna"}`);
+  return naStanju;
+}
