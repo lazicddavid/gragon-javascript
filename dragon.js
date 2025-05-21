@@ -1,3 +1,5 @@
+/*
+
 let monsterName = "dragon";
 let health = 100;
 let energy = 99;
@@ -34,7 +36,7 @@ function walk() {
   } else if (movement === "walking") {
     console.log("Monster is already walking.");
   }
-  /*checkStats();*/
+  /*checkStats();
 }
 
 console.log("------------");
@@ -92,7 +94,17 @@ console.log("------------");
 heal();
 
 console.log("------------");
+*/
 
-checkStats();
-<div>new title</div>;
-<h2></h2>;
+function getBookInfo() {
+  let naslov = "JavaScript za pocetnike";
+  let autor = "Ivan Ivic";
+  let godinaIzdavanja = 2022;
+  let cena = 25;
+  let stanje = "nova";
+  let zanr = "tehnologija";
+  let naStanju = true;
+}
+return `Naslov: ${naslov}, Autor: ${autor}, Cena: ${cena}, Stanje: ${stanje}`;
+
+getBookInfo();
