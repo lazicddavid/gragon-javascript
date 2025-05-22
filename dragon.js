@@ -138,6 +138,7 @@ function changeBookState(novoStanje) {
 }
 console.log(changeBookState("polovna"));
 
+let naStanju = true;
 function IsInStock() {
   if (naStanju === true) {
     console.log("Knjiga je na stanju");
@@ -148,8 +149,33 @@ function IsInStock() {
 }
 IsInStock();
 
+console.log("---------------------");
+
 function toggleStockStatus() {
   naStanju = !naStanju;
-  console.log(`Stanje knjige je sada: ${naStanju ? "dostupna" : "nedostupna"}`);
+  console.log(`Novo stanje: ${naStanju ? "dostupno" : "nedostupno"}`);
   return naStanju;
 }
+
+console.log(toggleStockStatus());
+console.log(toggleStockStatus());
+
+console.log("---------------------");
+
+function printBookDetails() {
+  let naslov = "JavaScript za pocetnike";
+  let autor = "Ivan Ivic";
+  let godinaIzdavanja = 2022;
+  let cijena = 25;
+  let stanje = "nova";
+  let zanr = "tehnologija";
+  let dostupna = true;
+
+  console.log(
+    `Naslov: ${naslov}, Autor: ${autor}, Godina izdavanja: ${godinaIzdavanja}, Cena: ${cena}, Stanje: ${stanje}, Zanr: ${zanr}, Dostupna na stanju: ${
+      dostupna ? "Da" : "Ne"
+    }`
+  );
+}
+
+printBookDetails();
