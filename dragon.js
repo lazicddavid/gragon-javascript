@@ -95,7 +95,7 @@ heal();
 
 console.log("------------");
 */
-
+const David = 123;
 function getBookInfo() {
   let naslov = "JavaScript za pocetnike";
   let autor = "Ivan Ivic";
@@ -110,6 +110,7 @@ function getBookInfo() {
 
 console.log(getBookInfo());
 
+console.log("---------------------");
 function calculateBookAge() {
   let godinaIzdavanja = 2022;
   let trenutnaGodina = new Date().getFullYear();
@@ -123,7 +124,9 @@ function changeBookPrice(novaCena) {
   return cena;
 }
 console.log(`Nova cena je ${changeBookPrice(39)} evra.`);
+console.log("---------------------");
 
+let stanje = "nova";
 function changeBookState(novoStanje) {
   if (
     novoStanje === "nova" ||
@@ -136,7 +139,9 @@ function changeBookState(novoStanje) {
     return "Greska: dozvoljena stanja su: 'nova' , 'polovna' , 'ostecena'.";
   }
 }
-console.log(changeBookState("polovna"));
+console.log(changeBookState("nova"));
+
+console.log("---------------------");
 
 let naStanju = true;
 function IsInStock() {
@@ -166,7 +171,7 @@ function printBookDetails() {
   let naslov = "JavaScript za pocetnike";
   let autor = "Ivan Ivic";
   let godinaIzdavanja = 2022;
-  let cijena = 25;
+  let cena = 25;
   let stanje = "nova";
   let zanr = "tehnologija";
   let dostupna = true;
