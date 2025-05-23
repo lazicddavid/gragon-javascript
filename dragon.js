@@ -105,6 +105,9 @@ let book = {
   naStanju: true,
 };
 
+<main>
+
+
 function getBookInfo() {
   return `Naslov: ${book.naslov}, Autor: ${book.autor}, Cena: ${book.cena}, Stanje: ${book.stanje}`;
 }
