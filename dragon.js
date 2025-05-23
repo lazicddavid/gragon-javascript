@@ -95,93 +95,70 @@ heal();
 
 console.log("------------");
 */
-const David = 123;
+let book = {
+  naslov: "JavaScript za pocetnike",
+  autor: "Ivan Ivic",
+  godinaIzdavanja: 2022,
+  cena: 25,
+  stanje: "nova",
+  zanr: "tehnologija",
+  naStanju: true,
+};
+
 function getBookInfo() {
-  let naslov = "JavaScript za pocetnike";
-  let autor = "Ivan Ivic";
-  let godinaIzdavanja = 2022;
-  let cena = 25;
-  let stanje = "nova";
-  let zanr = "tehnologija";
-  let naStanju = true;
-
-  return `Naslov: ${naslov}, Autor: ${autor}, Cena: ${cena}, Stanje: ${stanje}`;
+  return `Naslov: ${book.naslov}, Autor: ${book.autor}, Cena: ${book.cena}, Stanje: ${book.stanje}`;
 }
 
-console.log(getBookInfo());
-
-console.log("---------------------");
 function calculateBookAge() {
-  let godinaIzdavanja = 2022;
   let trenutnaGodina = new Date().getFullYear();
-  let starostKnjige = trenutnaGodina - godinaIzdavanja;
-  return starostKnjige;
+  return trenutnaGodina - book.godinaIzdavanja;
 }
-console.log("Knjiga je stara" + calculateBookAge() + " godina");
 
 function changeBookPrice(novaCena) {
-  cena = novaCena;
-  return cena;
+  book.cena = novaCena;
+  return book.cena;
 }
-console.log(`Nova cena je ${changeBookPrice(39)} evra.`);
-console.log("---------------------");
 
-let stanje = "nova";
 function changeBookState(novoStanje) {
   if (
     novoStanje === "nova" ||
     novoStanje === "polovna" ||
     novoStanje === "ostecena"
   ) {
-    stanje = novoStanje;
-    return `Stanje knjige je sada: ${stanje}`;
+    book.stanje = novoStanje;
+    return `Stanje knjige je sada: ${book.stanje}`;
   } else {
-    return "Greska: dozvoljena stanja su: 'nova' , 'polovna' , 'ostecena'.";
+    return "Greška: dozvoljena stanja su: 'nova', 'polovna', 'oštećena'.";
   }
 }
-console.log(changeBookState("nova"));
 
-console.log("---------------------");
-
-let naStanju = true;
-function IsInStock() {
-  if (naStanju === true) {
-    console.log("Knjiga je na stanju");
-  } else {
-    console.log(`Knjiga nije dostupna`);
-    return false;
-  }
+function isInStock() {
+  console.log(book.naStanju ? "Knjiga je na stanju" : "Knjiga nije dostupna");
+  return book.naStanju;
 }
-IsInStock();
-
-console.log("---------------------");
 
 function toggleStockStatus() {
-  naStanju = !naStanju;
-  console.log(`Novo stanje: ${naStanju ? "dostupno" : "nedostupno"}`);
-  return naStanju;
+  book.naStanju = !book.naStanju;
+  console.log(`Novo stanje: ${book.naStanju ? "dostupno" : "nedostupno"}`);
+  return book.naStanju;
 }
 
-console.log(toggleStockStatus());
-console.log(toggleStockStatus());
-
-console.log("---------------------");
-
 function printBookDetails() {
-  let naslov = "JavaScript za pocetnike";
-  let autor = "Ivan Ivic";
-  let godinaIzdavanja = 2022;
-  let cena = 25;
-  let stanje = "nova";
-  let zanr = "tehnologija";
-  let dostupna = true;
-
   console.log(
-    `Naslov: ${naslov}, Autor: ${autor}, Godina izdavanja: ${godinaIzdavanja}, Cena: ${cena}, Stanje: ${stanje}, Zanr: ${zanr}, Dostupna na stanju: ${
-      dostupna ? "Da" : "Ne"
-    }`
+    `Naslov: ${book.naslov}, Autor: ${book.autor}, Godina izdavanja: ${
+      book.godinaIzdavanja
+    }, Cena: ${book.cena}, Stanje: ${book.stanje}, Zanr: ${
+      book.zanr
+    }, Dostupna na stanju: ${book.naStanju ? "Da" : "Ne"}`
   );
 }
 
+// Primeri poziva:
+console.log(getBookInfo());
+console.log("Knjiga je stara " + calculateBookAge() + " godina");
+console.log("Nova cena: " + changeBookPrice(39));
+console.log(changeBookState("polovna"));
+isInStock();
+toggleStockStatus();
+toggleStockStatus();
 printBookDetails();
-<h1></h1>;
