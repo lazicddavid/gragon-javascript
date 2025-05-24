@@ -163,4 +163,5 @@ toggleStockStatus();
 toggleStockStatus();
 printBookDetails();
 
-<div clas="main page"></div>;
+<div clas="main page"></div>
+<h1>empty folder</h1>
