@@ -105,8 +105,6 @@ let book = {
   naStanju: true,
 };
 
-<footer></footer>;
-
 function getBookInfo() {
   return `Naslov: ${book.naslov}, Autor: ${book.autor}, Cena: ${book.cena}, Stanje: ${book.stanje}`;
 }
@@ -164,3 +162,5 @@ isInStock();
 toggleStockStatus();
 toggleStockStatus();
 printBookDetails();
+
+<div clas="main page"></div>;
