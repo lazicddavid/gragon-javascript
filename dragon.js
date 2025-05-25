@@ -181,13 +181,30 @@ let monster = {
       `Name: ${this.name}, Health: ${this.health}, Energy: ${this.energy}, Level: ${this.level}, Experience: ${this.experience}, Speed: ${this.speed}, Movement: ${this.movement}`
     );
   },
-};
-monster.logStats();
 
-console.log("-------------------- ");
-fly: function () {
-  if (this.movement = "walking") {
-    
-  }
-  
-}
+  fly: function () {
+    if (this.movement === "walking") {
+      this.movement = "flying";
+      this.speed += 50;
+      console.log(`${this.name} is now flying. Current speed is ${this.speed}`);
+    } else {
+      console.log("Monster is already flying");
+    }
+  },
+
+  walk: function () {
+    if (this.movement === "walking") {
+      console.log("Monster is already walking");
+      return;
+    } else {
+      this.movement = "walking";
+      this.speed -= 50;
+      console.log(`Monster is now walking, speed ${this.speed}`);
+    }
+  },
+};
+
+monster.fly();
+monster.walk();
+monster.walk();
+monster.logStats();
