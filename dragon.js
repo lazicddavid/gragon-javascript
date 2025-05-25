@@ -203,8 +203,16 @@ let monster = {
     }
   },
 };
-
+/*
 monster.fly();
 monster.walk();
 monster.walk();
 monster.logStats();
+*/
+
+attackTarget: function () {
+  if(this.energy < 30) {
+    console.log("Dont have enough energy for attack");
+    return;
+  
+}
