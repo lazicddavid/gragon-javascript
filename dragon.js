@@ -165,14 +165,38 @@ toggleStockStatus();
 toggleStockStatus();
 printBookDetails();
 */
-
+/*
 let monster = {
-  name: "dragon",
-  health: 100,
-  energy: 99,
-  level: 12,
-  experience: 30,
-  speed: 250,
-  attack: 54,
-  movement: "walking",
-};
+  name: "dragon"
+  health: 100
+  energy: 99
+  level: 12
+  experience: 30
+  speed: 250
+  attack: 54
+  movement: "walking"
+
+  logStats: function () {
+    console.log(
+      `Name: ${this.name}, Health: ${this.health}, Energy: ${this.energy}, Level: ${this.level}, Experience: ${this.experience}, Speed: ${this.speed}, Movement: ${this.movement}`
+    );
+  },*/
+
+
+
+
+  let = car {
+    brand: "Audi",
+    model: "A4",
+    year: 2020,
+    speed: 0,
+  
+
+    drive: function () {
+      this.speed += 20;
+      console.log(`CAr is now drivig at ${this.speed} km/h`);
+    }
+
+    };
+
+
