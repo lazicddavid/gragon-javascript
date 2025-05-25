@@ -95,6 +95,8 @@ heal();
 
 console.log("------------");
 */
+
+/*
 let book = {
   naslov: "JavaScript za pocetnike",
   autor: "Ivan Ivic",
@@ -162,7 +164,15 @@ isInStock();
 toggleStockStatus();
 toggleStockStatus();
 printBookDetails();
+*/
 
-<ul>
-  li<li></li>
-</ul>;
+let monster = {
+  name: "dragon",
+  health: 100,
+  energy: 99,
+  level: 12,
+  experience: 30,
+  speed: 250,
+  attack: 54,
+  movement: "walking",
+};
