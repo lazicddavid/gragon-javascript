@@ -202,17 +202,52 @@ let monster = {
       console.log(`Monster is now walking, speed ${this.speed}`);
     }
   },
+
+  attackTarget: function (targetPower) {
+    if (this.energy < 30) {
+      console.log("Don't have enough energy to attack!");
+      return;
+    }
+
+    if (targetPower < this.attack) {
+      console.log("Monster attacked with success.");
+      this.experience += 50;
+      this.energy -= 50;
+    } else {
+      console.log("Monster failed to attack.");
+      this.energy -= 70;
+      this.health -= 50;
+    }
+
+    this.checkStats();
+  },
+
+  heal: function () {
+    this.energy += 100;
+    this.health += 100;
+    this.logStats();
+  },
+
+  checkStats: function () {
+    if (this.health < 1) {
+      console.log("Monster died. Game over");
+      return;
+    }
+
+    if (this.experience > 100) {
+      let newExp = this.experience - 100;
+      this.level += 1;
+      this.experience = newExp;
+      console.log(
+        `Level up! New level: ${this.level}, remaining EXP: ${this.experience}`
+      );
+    }
+  },
 };
-/*
+
+monster.logStats();
 monster.fly();
 monster.walk();
-monster.walk();
-monster.logStats();
-*/
-
-attackTarget: function () {
-  if(this.energy < 30) {
-    console.log("Dont have enough energy for attack");
-    return;
-  
-}
+monster.attackTarget(40);
+monster.attackTarget(80);
+monster.heal();
