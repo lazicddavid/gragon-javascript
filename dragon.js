@@ -203,13 +203,13 @@ let monster = {
     }
   },
 
-  attackTarget: function (targetPower) {
+  attackTarget: function (target) {
     if (this.energy < 30) {
       console.log("Don't have enough energy to attack!");
       return;
     }
 
-    if (targetPower < this.attack) {
+    if (target < this.attack) {
       console.log("Monster attacked with success.");
       this.experience += 50;
       this.energy -= 50;
