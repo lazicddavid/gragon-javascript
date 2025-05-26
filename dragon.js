@@ -195,7 +195,6 @@ let monster = {
   walk: function () {
     if (this.movement === "walking") {
       console.log("Monster is already walking");
-      return;
     } else {
       this.movement = "walking";
       this.speed -= 50;
@@ -205,7 +204,7 @@ let monster = {
 
   attackTarget: function (target) {
     if (this.energy < 30) {
-      console.log("Don't have enough energy to attack!");
+      console.log("Dont have enough energy to attack!");
       return;
     }
 
@@ -239,13 +238,11 @@ let monster = {
       this.level += 1;
       this.experience = newExp;
       console.log(
-        `Level up! New level: ${this.level}, remaining EXP: ${this.experience}`
+        `Level up, New level: ${this.level}, remaining EXP: ${this.experience}`
       );
     }
   },
 };
-
-let monster1 = null;
 
 monster.logStats();
 monster.fly();
