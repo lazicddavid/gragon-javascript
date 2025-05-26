@@ -245,6 +245,8 @@ let monster = {
   },
 };
 
+let monster1 = null;
+
 monster.logStats();
 monster.fly();
 monster.walk();
