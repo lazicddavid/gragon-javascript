@@ -252,5 +252,5 @@ monster.attackTarget(80);
 monster.heal();
 /*
 
-<h1>new task</h1>
-<h4>New main page</h4>
+
+<h5></h5>
