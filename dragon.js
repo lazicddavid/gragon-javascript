@@ -253,3 +253,4 @@ monster.heal();
 /*
 
 <h1>new task</h1>
+<h4>New main page</h4>
