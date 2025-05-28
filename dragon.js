@@ -265,3 +265,5 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(2, 4));
+
+<footer></footer>;
