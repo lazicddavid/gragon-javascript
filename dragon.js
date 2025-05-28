@@ -257,3 +257,4 @@ function cutFruidPieces (fruit) {
 
 }
 
+function fruitProcessor (apples, oranges)
