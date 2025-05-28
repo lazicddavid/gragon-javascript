@@ -250,7 +250,10 @@ monster.walk();
 monster.attackTarget(40);
 monster.attackTarget(80);
 monster.heal();
-/*
+*/
 
+function cutFruidPieces (fruit) {
+  return fruit * 4;
 
-<h5></h5>
+}
+
