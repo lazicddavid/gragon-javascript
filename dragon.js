@@ -257,4 +257,7 @@ function cutFruidPieces (fruit) {
 
 }
 
-function fruitProcessor (apples, oranges)
+function fruitProcessor (apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruidPieces(oranges)
+}
