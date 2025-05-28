@@ -165,7 +165,7 @@ toggleStockStatus();
 toggleStockStatus();
 printBookDetails();
 */
-
+/*
 let monster = {
   name: "dragon",
   health: 100,
@@ -252,15 +252,16 @@ monster.attackTarget(80);
 monster.heal();
 */
 
-function cutFruidPieces (fruit) {
+function cutFruitPieces(fruit) {
   return fruit * 4;
-
 }
 
-function fruitProcessor (apples, oranges) {
+function fruitProcessor(apples, oranges) {
   const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(oranges)
+  const orangePieces = cutFruitPieces(oranges);
 
-  const juice = `Juice with $ {applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+  const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
   return juice;
 }
+
+console.log(fruitProcessor(2, 4));
