@@ -278,7 +278,7 @@ const vehicle = {
   services: [2017, 20019, 2020],
 
   vehicleInfo: function () {
-    return `Vozilo: ${this.brand} ${this.model}, Godina: ${this.year}, gorivo: ${this.fuelType}, kilometraza ${this.mileage},Trenutno u upotrebi: ${this.inUse}, Servisiran ${thiis.services}`;
+    return `Vozilo: ${this.brand} ${this.model}, Godina: ${this.year}, gorivo: ${this.fuelType}, kilometraza ${this.mileage},Trenutno u upotrebi: ${this.inUse}, Servisiran ${this.services}`;
   },
 
   addMileage: function (km) {
