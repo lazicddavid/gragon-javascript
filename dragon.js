@@ -297,3 +297,5 @@ const vehicle = {
     this.services.push(year);
   },
 };
+
+console.log(vehicle.vehicleInfo());
