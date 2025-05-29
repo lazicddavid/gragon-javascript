@@ -251,7 +251,7 @@ monster.attackTarget(40);
 monster.attackTarget(80);
 monster.heal();
 */
-
+/*
 function cutFruitPieces(fruit) {
   return fruit * 4;
 }
@@ -266,4 +266,14 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(2, 4));
 
-<footer></footer>;
+*/
+
+const vehicle = {
+  brand: "Volvo",
+  model: "v60",
+  year: 2016,
+  fuelType: "diesel",
+  mileage: 172000,
+  inUse: true,
+  services: [2017, 20019, 2020],
+};
