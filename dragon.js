@@ -281,6 +281,10 @@ const vehicle = {
     return `Vozilo: ${this.brand} ${this.model}, Godina: ${this.year}, gorivo: ${this.fuelType}, kilometraza ${this.mileage},Trenutno u upotrebi: ${this.inUse}, Servisiran ${this.services}`;
   },
 
+  toggleInUse: function () {
+    this.inUse = !this.inUse;
+  },
+
   addMileage: function (km) {
     this.mileage += km;
   },
@@ -304,3 +308,19 @@ vehicle.addMileage(500);
 vehicle.addSerice(2020);
 vehicle.lastService();
 console.log(vehicle.vehicleInfo());
+
+console.log("----------------------");
+
+
+const musicPlayer = {
+  name: "MyPlayer",
+  volume: 70,
+  isPlaying: false,
+ playlist: ["Imagine", "Bohemian Rhapsody", "Smells Like Teen Spirit", "Thriller", "Back in Black"],
+  currentTrackIndex: 0,
+
+
+  play: function () {
+    this.isPlaying = true;
+    console.log(`Reprodukuje se: ${this.playlist[this.currentTrackIndex]}`);
+  },
