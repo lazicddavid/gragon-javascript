@@ -311,16 +311,54 @@ console.log(vehicle.vehicleInfo());
 
 console.log("----------------------");
 
-
 const musicPlayer = {
   name: "MyPlayer",
   volume: 70,
   isPlaying: false,
- playlist: ["Imagine", "Bohemian Rhapsody", "Smells Like Teen Spirit", "Thriller", "Back in Black"],
+  playlist: [
+    "Imagine",
+    "Bohemian Rhapsody",
+    "Smells Like Teen Spirit",
+    "Thriller",
+    "Back in Black",
+  ],
   currentTrackIndex: 0,
-
 
   play: function () {
     this.isPlaying = true;
     console.log(`Reprodukuje se: ${this.playlist[this.currentTrackIndex]}`);
   },
+
+  pause: function () {
+    this.isPlaying = false;
+    console.log("Reproducija pauzirana.");
+  },
+  nextTrack: function () {
+    if (this.currentTrackIndex + 1 >= this.playlist.length) {
+      this.currentTrackIndex = 0;
+    } else {
+      this.currentTrackIndex++;
+    }
+    console.log(`Sledeca pesma: ${this.playlist[this.currentTrackIndex]}`);
+  },
+
+  previousTrack: function () {
+    if (this.currentTrackIndex === 0) {
+      this.currentTrackIndex = this.playlist.length - 1; // idi na poslednju pesmu ako si na prvoj
+    } else {
+      this.currentTrackIndex--;
+    }
+    console.log(`Prethodna pesma: ${this.playlist[this.currentTrackIndex]}`);
+  },
+
+  addTrack: function (novaPesma) {
+    this.playlist.push(novaPesma);
+    console.log(`Dodato u playlistu: ${novaPesma}`);
+  },
+};
+
+musicPlayer.play();
+musicPlayer.nextTrack();
+musicPlayer.previousTrack();
+musicPlayer.addTrack("Hotel California");
+musicPlayer.pause();
