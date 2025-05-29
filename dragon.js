@@ -299,4 +299,5 @@ const vehicle = {
 };
 
 console.log(vehicle.vehicleInfo());
-vehicle / toogleInUse();
+vehicle.toggleInUse();
+vehicle.addMileage(500);
