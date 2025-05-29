@@ -293,4 +293,7 @@ const vehicle = {
       );
     }
   },
+  addSerice: function (year) {
+    this.services.push(year);
+  },
 };
