@@ -276,4 +276,6 @@ const vehicle = {
   mileage: 172000,
   inUse: true,
   services: [2017, 20019, 2020],
+
+  vehicleInfo: function () {},
 };
