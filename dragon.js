@@ -303,3 +303,4 @@ vehicle.toggleInUse();
 vehicle.addMileage(500);
 vehicle.addSerice(2020);
 vehicle.lastService();
+console.log(vehicle.vehicleInfo());
