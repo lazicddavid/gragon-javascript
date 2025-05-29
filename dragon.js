@@ -280,4 +280,7 @@ const vehicle = {
   vehicleInfo: function () {
     return `Vozilo: ${this.brand} ${this.model}, Godina: ${this.year}, gorivo: ${this.fuelType}, kilometraza ${this.mileage},Trenutno u upotrebi: ${this.inUse}, Servisiran ${thiis.services}`;
   },
+
+    addMileage: function (km) {
+    this.mileage += km; 
 };
