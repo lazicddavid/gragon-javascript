@@ -284,5 +284,13 @@ const vehicle = {
   addMileage: function (km) {
     this.mileage += km;
   },
-  lastService: function () {},
+  lastService: function () {
+    if (this.services.length === 0) {
+      console.log("Nema unetih servisa");
+    } else {
+      console.log(
+        `Poslednji servis: ${this.services[this.services.length - 1]}`
+      );
+    }
+  },
 };
