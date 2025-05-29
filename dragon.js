@@ -299,3 +299,4 @@ const vehicle = {
 };
 
 console.log(vehicle.vehicleInfo());
+vehicle / toogleInUse();
