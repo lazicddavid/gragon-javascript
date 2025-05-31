@@ -288,6 +288,7 @@ const vehicle = {
   addMileage: function (km) {
     this.mileage += km;
   },
+
   lastService: function () {
     if (this.services.length === 0) {
       console.log("Nema unetih servisa");
@@ -305,11 +306,11 @@ const vehicle = {
 console.log(vehicle.vehicleInfo());
 vehicle.toggleInUse();
 vehicle.addMileage(500);
-vehicle.addSerice(2020);
+vehicle.addSerice(2021);
 vehicle.lastService();
 console.log(vehicle.vehicleInfo());
 
-console.log("----------------------");
+console.log("--------------------------");
 
 const musicPlayer = {
   name: "MyPlayer",
@@ -322,7 +323,7 @@ const musicPlayer = {
     "Thriller",
     "Back in Black",
   ],
-  currentTrackIndex: 0,
+  currentTrackIndex: 4,
 
   play: function () {
     this.isPlaying = true;
@@ -334,7 +335,7 @@ const musicPlayer = {
     console.log("Reproducija pauzirana.");
   },
   nextTrack: function () {
-    if (this.currentTrackIndex + 1 >= this.playlist.length) {
+    if (this.currentTrackIndex === this.playlist.length - 1) {
       this.currentTrackIndex = 0;
     } else {
       this.currentTrackIndex++;
@@ -344,9 +345,9 @@ const musicPlayer = {
 
   previousTrack: function () {
     if (this.currentTrackIndex === 0) {
-      this.currentTrackIndex = this.playlist.length - 1; // idi na poslednju pesmu ako si na prvoj
+      this.currentTrackIndex = this.playlist.length - 1;
     } else {
-      this.currentTrackIndex--;
+      this.currentTrackIndex = this.currentTrackIndex - 1;
     }
     console.log(`Prethodna pesma: ${this.playlist[this.currentTrackIndex]}`);
   },
@@ -360,5 +361,7 @@ const musicPlayer = {
 musicPlayer.play();
 musicPlayer.nextTrack();
 musicPlayer.previousTrack();
-musicPlayer.addTrack("Hotel California");
+musicPlayer.addTrack("hotel California");
 musicPlayer.pause();
+
+<div>main titlegh</div>;
